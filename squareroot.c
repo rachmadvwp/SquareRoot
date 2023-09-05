@@ -16,20 +16,19 @@ int main(void)
    
   for (int i = n; i > 0; i -= 2) 
   {
-	  R = (R << 2) | (D & ( 3 << (i-2) )) >> (i-2);
+    R = (R << 2) | (D & ( 3 << (i-2) )) >> (i-2);
     if (R >= ((F << 1) | 1)) 
-	  {
+    {
       Q = (Q << 1) | 1;
       F = ((F + (F & 1)) << 1) | 1;
     } 
-	  else 
-	  {
+    else 
+    {
       Q = (Q << 1) | 0;
       F = ((F + (F & 1)) << 1) | 0;
     }
-    R = R - (F * (F & 1));
-	  
-	  printf("index(%d) = %d/%d\n", i, Q, R);
-   }
-   printf("sqrt(%d) = %d/%d\n", D, Q, R);
+    R = R - (F * (F & 1));	  
+    printf("index(%d) = %d/%d\n", i, Q, R);
+  }
+printf("sqrt(%d) = %d/%d\n", D, Q, R);
 }
