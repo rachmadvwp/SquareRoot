@@ -31,5 +31,5 @@ int main(void)
     R = R - (F * (F & 1));	  
     printf("index(%d) = %d/%d\n", i, Q, R);
   }
-printf("sqrt(%d) = %d/%d\n", D, Q, R);
+printf("squareroot(%d) = %d/%d\n", D, Q, R);
 }
